@@ -1,4 +1,4 @@
 class Store < ApplicationRecord
-  has many :users through :user_stores
+  has_many :users, through: :user_stores
 
 end
