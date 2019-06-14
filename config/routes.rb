@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   # get '/', to: 'application#welcome'
   get '/stores', to: 'stores#index'
   post '/login', to: 'auth#login'
-  post '/signup', to: "users#create"
+  post '/signup', to: 'users#create'
+  get '/likes', to: 'users_store#index'
 end
