@@ -1,14 +1,13 @@
 class UsersController < ApplicationController
 
   def create
-    User.create(user_params)
+    user = User.create(user_params)
 
     is_valid = user.valid?
-
     if is_valid
       render json: { token: encode_token(user) }
     else
-      render json:[1,2,3]
+      render json:{error: "Wrong username or password"}
     end
 
   end
@@ -21,7 +20,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-
     params.permit(:username, :password)
   end
 

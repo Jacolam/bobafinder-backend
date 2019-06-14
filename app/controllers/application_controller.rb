@@ -1,11 +1,4 @@
-
-
 class ApplicationController < ActionController::API
-
-  # def welcome
-  #   @all = Store.all
-  #   render json: {stores:@all}  #
-  # end
 
   def user_payload(user)
     {user_id: user.id}
