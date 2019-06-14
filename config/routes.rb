@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get '/stores', to: 'stores#index'
   post '/login', to: 'auth#login'
   post '/signup', to: "users#create"
+  
 end
