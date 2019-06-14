@@ -15,6 +15,7 @@ def save_store_data(url)
 response_string = RestClient.get(url)
 response_hash = JSON.parse(response_string)
 # setting limit for while loop
+# adding 50 allows us to include any remainders 
 length = response_hash['response']["totalResults"] + 50
 
 
