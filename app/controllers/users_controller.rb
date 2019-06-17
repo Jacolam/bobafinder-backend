@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     if is_valid
       render json: { token: encode_token(user) }
     else
-      render json:{error: "Wrong username or password"}
+      render json:{error: "Invalid username or password"}
     end
 
   end

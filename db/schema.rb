@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 2019_06_12_192321) do
   create_table "user_stores", force: :cascade do |t|
     t.integer "user_id"
     t.integer "store_id"
-    t.boolean "visited"
-    t.boolean "favorite"
+    t.boolean "visited", default: false
+    t.boolean "favorite", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
