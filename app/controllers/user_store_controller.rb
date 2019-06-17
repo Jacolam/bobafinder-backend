@@ -17,8 +17,7 @@ class UserStoreController < ApplicationController
     store["favorite"] = !store["favorite"]
     # allows us to favorite and unfavorite locations
     store.save
-    byebug
-    render json:{visited:store }
+    render json:{favorite:store }
   end
 
 end
