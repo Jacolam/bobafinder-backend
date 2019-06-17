@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   post '/signup', to: 'users#create'
   get '/likes', to: 'users_store#index'
   
+  # get '/user_stores', to: 'user_store#index'
+
   post '/visit', to: 'user_store#visit'
   post '/favorite', to: 'user_store#favorite'
 
