@@ -13,7 +13,8 @@ class UsersController < ApplicationController
   end
 
   def profile
-    user = User.find(user_id)
+    current_user.user_stores
+    
     render json: user
   end
 
