@@ -13,11 +13,6 @@ class UsersController < ApplicationController
   end
 
   def profile
-<<<<<<< HEAD
-    current_user.user_stores
-    byebug
-    render json: user
-=======
     # FIND STORES SELECTED AS FAVORITE
     favorite_selected = current_user.user_stores.select { |store| store.favorite == true}
 
@@ -30,9 +25,7 @@ class UsersController < ApplicationController
     visited_selected = current_user.user_stores.select { |store| store.visited == true}
     store_ids = visited_selected.map {|x| x.id}
     visited = store_ids.map { |num| current_user.stores.find(num) }
-    # byebug
-    render json: {favorites: favorites, visited: visited}
->>>>>>> 4b6e254606bd5a42e7359bc5dcf4da8356457788
+    render json: {favorites: favorites, visited: visited, username:current_user.username}
   end
 
   private
