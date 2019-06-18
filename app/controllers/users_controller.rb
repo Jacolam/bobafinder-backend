@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 
   def profile
     current_user.user_stores
-    # byebug
+    byebug
     render json: user
   end
 
